@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { sculptureList } from "./assets/data.js";
 
-function App() {
+export default function App() {
+  const [index, setIndex] = useState(0)
+
+
+  function handleClick() {
+    setIndex(index + 1)
+  }
+
+  let sculpture = sculptureList[index];
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button onClick={handleClick}>Next</button>
+      <h2>
+        <i>{sculpture.name} </i>
+        by {sculpture.artist}
+      </h2>
+      <h3>
+        ({index + 1} of {sculptureList.length})
+      </h3>
+      <img src={sculpture.url} alt={sculpture.alt} />
+      <p>{sculpture.description}</p>
+    </>
   );
 }
-
-export default App;
