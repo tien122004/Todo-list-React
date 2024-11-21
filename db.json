@@ -1,24 +1,9 @@
 {
-    "todo": [
-        {
-            "id": 1,
-            "description": "làm việc",
-            "done": false
-        },
-        {
-            "id": 2,
-            "description": "học bài",
-            "done": false
-        },
-        {
-            "id": 3,
-            "description": "chơi game",
-            "done": false
-        },
-        {
-            "id": 4,
-            "description": "coi phim",
-            "done": false
-        }
-    ]
+  "todos": [
+    {
+      "id": "0.4e3f8c3b965db",
+      "name": "Học bài",
+      "done": false
+    }
+  ]
 }
